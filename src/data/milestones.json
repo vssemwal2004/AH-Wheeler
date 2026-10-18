@@ -1,0 +1,58 @@
+[
+  {
+    "slot": "TL-01",
+    "year": "1877",
+    "title": "The first stall",
+    "body": "A bookstall opens on the platform at Allahabad, selling newspapers, magazines and books to passengers waiting for their trains.",
+    "caption": "Allahabad · 1877",
+    "verify": true
+  },
+  {
+    "slot": "TL-02",
+    "year": "1888",
+    "title": "The Indian Railway Library",
+    "body": "Wheeler publishes cheap, paper-covered books made for train journeys, including six early collections by Rudyard Kipling, among them Soldiers Three.",
+    "caption": "Indian Railway Library · 1888–89",
+    "verify": true
+  },
+  {
+    "slot": "TL-03",
+    "year": "1890s",
+    "title": "Along the network",
+    "body": "As the railway grows, stalls follow it, from great junctions to smaller halts, wherever passengers have time to read.",
+    "caption": "Date to be confirmed",
+    "verify": true
+  },
+  {
+    "slot": "TL-04",
+    "year": "19··",
+    "title": "Reading in many languages",
+    "body": "Newspapers and books in Indian languages take their place beside English titles on the shelves.",
+    "caption": "Date to be confirmed",
+    "verify": true
+  },
+  {
+    "slot": "TL-05",
+    "year": "19··",
+    "title": "The Banerjee family",
+    "body": "Stewardship of the company passes to the Banerjee family, who carry the stalls through a changing country.",
+    "caption": "Date to be confirmed",
+    "verify": true
+  },
+  {
+    "slot": "TL-06",
+    "year": "1947",
+    "title": "A new nation, the same platforms",
+    "body": "Independent India keeps travelling, and keeps reading. The stalls remain a fixture of the station.",
+    "caption": "Post-Independence",
+    "verify": true
+  },
+  {
+    "slot": "TL-07",
+    "year": "TODAY",
+    "title": "Still on the platform",
+    "body": "Wheeler stalls still serve travellers, and some historic kiosks are now recognised as heritage structures in their own right.",
+    "caption": "Present day",
+    "verify": true
+  }
+]

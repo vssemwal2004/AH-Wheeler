@@ -1,0 +1,23 @@
+{
+  "categories": [
+    { "id": "all", "label": "All" },
+    { "id": "irl", "label": "Railway Library" },
+    { "id": "press", "label": "Newspapers" },
+    { "id": "regional", "label": "Regional" },
+    { "id": "ads", "label": "Advertisements" }
+  ],
+  "items": [
+    { "slot": "BOOK-01", "category": "irl", "title": "Soldiers Three", "series": "Indian Railway Library No. 1", "meta": "Kipling · 1888", "color": "#5E1A1D", "height": 330, "verify": true },
+    { "slot": "BOOK-02", "category": "irl", "title": "The Story of the Gadsbys", "series": "Indian Railway Library", "meta": "Kipling · 1888", "color": "#1F3A2E", "height": 312, "verify": true },
+    { "slot": "BOOK-03", "category": "irl", "title": "In Black and White", "series": "Indian Railway Library", "meta": "Kipling · 1888", "color": "#1A1714", "height": 322, "verify": true },
+    { "slot": "BOOK-04", "category": "irl", "title": "Under the Deodars", "series": "Indian Railway Library", "meta": "Kipling · 1888", "color": "#3E5C76", "height": 300, "verify": true },
+    { "slot": "BOOK-05", "category": "irl", "title": "The Phantom 'Rickshaw", "series": "Indian Railway Library", "meta": "Kipling · 1888", "color": "#7A4B2A", "height": 334, "verify": true },
+    { "slot": "BOOK-06", "category": "irl", "title": "Wee Willie Winkie", "series": "Indian Railway Library", "meta": "Kipling · 1888", "color": "#5E1A1D", "height": 306, "verify": true },
+    { "slot": "BOOK-07", "category": "press", "title": "Newspaper masthead", "series": "Placeholder", "meta": "Title TBC", "color": "#4A4038", "height": 360, "verify": true },
+    { "slot": "BOOK-08", "category": "press", "title": "Magazine cover", "series": "Placeholder", "meta": "Title TBC", "color": "#6B6258", "height": 290, "verify": true },
+    { "slot": "BOOK-09", "category": "regional", "title": "Hindi title", "series": "Placeholder", "meta": "Title TBC", "color": "#8A5A2B", "height": 316, "verify": true },
+    { "slot": "BOOK-10", "category": "regional", "title": "Bengali title", "series": "Placeholder", "meta": "Title TBC", "color": "#2E4A3E", "height": 298, "verify": true },
+    { "slot": "BOOK-11", "category": "ads", "title": "Wheeler advertisement", "series": "Placeholder", "meta": "Date TBC", "color": "#A8834A", "height": 340, "verify": true },
+    { "slot": "BOOK-12", "category": "ads", "title": "Stall poster", "series": "Placeholder", "meta": "Date TBC", "color": "#5E1A1D", "height": 310, "verify": true }
+  ]
+}

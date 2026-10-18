@@ -1,0 +1,17 @@
+/* Chapter 5 · Our Legacy */
+.legacy__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(32px, 6vw, 104px); align-items: center; }
+.legacy__image-wrap { overflow: hidden; }
+.legacy__image { will-change: transform; }
+/* scale from the bottom so the scan's blank paper margin at the top stays out of frame */
+.legacy__image img { transform-origin: 50% 100%; }
+.legacy__text .h2 { margin-bottom: 32px; }
+.legacy__note {
+  position: relative; margin-top: 36px; padding-left: 4px;
+  font-family: var(--f-hand); font-weight: 500; font-size: clamp(1.6rem, 2.4vw, 2rem); line-height: 1.1;
+  color: var(--maroon); transform: rotate(-2deg); transform-origin: left;
+}
+.legacy__note-tag {
+  display: block; margin-top: 6px; font-family: var(--f-mono); font-size: 0.625rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+@media (max-width: 899px) { .legacy__grid { grid-template-columns: 1fr; } }

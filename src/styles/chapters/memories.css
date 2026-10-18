@@ -1,0 +1,29 @@
+/* Chapter 8 · Memories (sticky stacking cards) */
+.memories__stack { position: relative; max-width: 920px; }
+.memory {
+  position: sticky; top: calc(16vh + var(--i) * 18px);
+  display: grid; grid-template-columns: 132px 1fr; gap: clamp(18px, 3vw, 36px); align-items: start;
+  margin-bottom: 10vh; padding: clamp(22px, 3vw, 40px);
+  background: var(--paper); border: 1px solid var(--rule);
+  box-shadow: 0 30px 60px -36px rgba(26, 23, 20, 0.55);
+  transform-origin: 50% 0;
+}
+.memory:last-child { margin-bottom: 0; }
+.memory::before {
+  /* ticket perforation along the top */
+  content: ''; position: absolute; left: 16px; right: 16px; top: 10px; border-top: 1px dashed var(--rule);
+}
+.memory__quote { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.4rem, 2.4vw, 2.1rem); line-height: 1.2; }
+.memory__who { margin-top: 18px; font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.memory__sample {
+  position: absolute; top: 18px; right: 18px; padding: 3px 8px;
+  font-family: var(--f-mono); font-size: 0.625rem; letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid var(--maroon); color: var(--maroon);
+}
+.memories__cta { margin-top: clamp(64px, 10vh, 120px); display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px; }
+
+@media (max-width: 599px) {
+  .memory { grid-template-columns: 1fr; top: calc(12vh + var(--i) * 12px); }
+  .memory .ph-box { max-width: 96px; }
+  .memory__sample { position: static; justify-self: start; }
+}

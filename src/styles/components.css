@@ -1,0 +1,258 @@
+/* ═══════════ Masthead ═══════════ */
+.masthead {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; gap: 32px;
+  padding: 22px var(--gutter);
+  color: var(--paper-on-dark);
+  transition: padding 0.5s var(--ease-out), background 0.5s, backdrop-filter 0.5s;
+}
+.masthead.is-condensed {
+  padding-block: 12px;
+  background: rgba(26, 23, 20, 0.9);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(168, 131, 74, 0.25);
+}
+.masthead__logo { display: flex; align-items: baseline; gap: 14px; text-decoration: none; margin-right: auto; }
+.wordmark { font-family: var(--f-display); font-weight: 600; font-size: 1.5rem; letter-spacing: 0.01em; white-space: nowrap; }
+.wordmark em { font-style: italic; font-weight: 500; color: var(--brass); }
+.wordmark--lg { font-size: clamp(2rem, 4vw, 3rem); }
+.masthead__est { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); }
+.masthead__nav { display: flex; gap: 28px; }
+.masthead__nav a {
+  font-family: var(--f-ui); font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none; opacity: 0.8; transition: opacity 0.3s;
+}
+.masthead__nav a:hover { opacity: 1; }
+.masthead__menu { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; }
+.masthead__menu-bars, .masthead__menu-bars::before {
+  display: block; width: 22px; height: 1px; background: currentColor; position: relative;
+}
+.masthead__menu-bars::before { content: ''; position: absolute; top: 7px; }
+.masthead__menu[aria-expanded="true"] .masthead__menu-bars { transform: translateY(3px) rotate(45deg); }
+.masthead__menu[aria-expanded="true"] .masthead__menu-bars::before { top: 0; transform: rotate(-90deg); }
+
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 45; background: var(--maroon); color: var(--paper-on-dark);
+  display: flex; align-items: center; padding: var(--gutter);
+}
+.mobile-menu[hidden] { display: none; }
+.mobile-menu nav { display: flex; flex-direction: column; gap: 18px; }
+.mobile-menu a { font-family: var(--f-display); font-size: 2.5rem; text-decoration: none; }
+
+@media (max-width: 899px) {
+  .masthead__nav, .masthead__cta, .masthead__est { display: none; }
+  .masthead__menu { display: inline-flex; }
+}
+
+/* ═══════════ Station board ═══════════
+   Indian Railways nameboard: yellow, black lettering, Hindi above English. */
+.board {
+  display: inline-flex; flex-direction: column; align-items: center;
+  min-width: 220px; padding: 12px 28px 10px;
+  margin-bottom: clamp(40px, 6vh, 72px);
+  background: var(--board); color: var(--ink);
+  box-shadow: inset 0 0 0 3px var(--board), inset 0 0 0 5px var(--ink), 0 10px 30px -18px rgba(0, 0, 0, 0.6);
+  text-align: center; line-height: 1.15;
+}
+.board__en { font-family: var(--f-board); font-weight: 600; font-size: clamp(1.05rem, 1.8vw, 1.5rem); letter-spacing: 0.08em; }
+.board__hi { order: -1; font-family: var(--f-deva); font-weight: 600; font-size: clamp(1rem, 1.6vw, 1.35rem); margin-bottom: 2px; }
+.board__meta { font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.12em; margin-top: 6px; opacity: 0.75; }
+.board--small { min-width: 0; padding: 6px 14px 5px; margin: 0; }
+.board--small .board__en { font-size: 0.875rem; letter-spacing: 0.14em; }
+
+/* ═══════════ Placeholder ═══════════ */
+.ph-box {
+  position: relative; width: 100%; aspect-ratio: var(--ratio, 4 / 3);
+  background:
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--fg) 7%, transparent) 0 1px, transparent 1px 11px),
+    color-mix(in srgb, var(--fg) 6%, var(--bg));
+  border: 1px solid var(--rule);
+  color: var(--fg-soft); overflow: hidden;
+}
+.ph-box img { width: 100%; height: 100%; object-fit: cover; }
+.ph-box__id, .ph-box__meta {
+  position: absolute; left: 14px; font-family: var(--f-mono); font-size: 0.6875rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.ph-box__id { top: 12px; }
+.ph-box__meta { bottom: 12px; right: 14px; }
+.ph-box__mark {
+  position: absolute; inset: 0; margin: auto; width: 46px; height: 36px;
+  border: 1px solid currentColor; opacity: 0.45;
+  background: linear-gradient(to top right, transparent calc(50% - 0.5px), currentColor 50%, transparent calc(50% + 0.5px));
+}
+.ph-box.has-img { background: color-mix(in srgb, var(--fg) 10%, var(--bg)); border-color: transparent; }
+/* Archival print feel: a light warm tone and a soft vignette, like a mounted photograph */
+.ph-box.has-img img, .ph-zoom { filter: sepia(0.22) saturate(0.9) contrast(1.03); }
+.ph-box.has-img::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 70px rgba(40, 26, 12, 0.28);
+}
+.ph-zoom { position: absolute; inset: 0; background-repeat: no-repeat; }
+/* the station sits at the centre of a map detail */
+.ph-zoom::after {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border-radius: 50%; border: 2px solid var(--maroon); box-shadow: 0 0 0 4px rgba(242, 234, 219, 0.6);
+}
+.caption__credit {
+  display: block; margin-top: 4px; font-size: 0.625rem; letter-spacing: 0.04em;
+  text-transform: none; opacity: 0.75;
+}
+.ph--bare .ph-box { position: absolute; inset: 0; aspect-ratio: auto; border: 0; background: none; }
+.ph--bare .ph-box__mark { display: none; }
+
+/* ═══════════ Edmondson card tickets (fact cards) ═══════════ */
+.eticket {
+  position: relative; display: flex; flex-direction: column; gap: 4px;
+  padding: 22px 28px 20px 36px; min-height: 150px;
+  background: var(--ledger); color: var(--ink);
+  border: 1px solid var(--rule);
+  /* perforated left edge */
+  -webkit-mask: radial-gradient(circle at 0 10px, transparent 5px, #000 5.5px) 0 0 / 100% 20px repeat-y;
+          mask: radial-gradient(circle at 0 10px, transparent 5px, #000 5.5px) 0 0 / 100% 20px repeat-y;
+}
+.eticket::before { content: ''; position: absolute; left: 18px; top: 14px; bottom: 14px; border-left: 1px dashed var(--rule); }
+.eticket__label { font-family: var(--f-mono); font-size: var(--t-label); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.eticket__value { font-family: var(--f-display); font-weight: 600; font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1; color: var(--maroon); }
+.eticket__note { font-family: var(--f-ui); font-size: 0.875rem; color: var(--muted); }
+.eticket__hole {
+  position: absolute; top: 16px; right: 18px; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+.js:not(.reduce-motion) .eticket__hole { transform: scale(0); }
+
+/* ═══════════ Split-flap ═══════════ */
+.flap { display: inline-flex; gap: 3px; font-family: var(--f-mono); font-weight: 500; }
+.flap__cell {
+  position: relative; display: inline-grid; place-items: center;
+  width: 0.82em; height: 1.3em; border-radius: 3px;
+  background: linear-gradient(#2A2622 0 50%, #201D1A 50% 100%);
+  color: var(--paper-on-dark); line-height: 1;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+.flap__cell::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0, 0, 0, 0.7); }
+.flap__cell.is-tick { animation: flap-tick 0.09s ease-in; }
+.flap__cell--space { background: transparent; box-shadow: none; }
+.flap__cell--space::after { display: none; }
+@keyframes flap-tick { 50% { transform: scaleY(0.82); filter: brightness(1.25); } }
+
+/* ═══════════ Shutter ═══════════
+   Static (no-JS) look: corrugated slats via gradient. JS replaces it with real slats. */
+.shutter {
+  position: absolute; inset: 0; z-index: 2; overflow: hidden;
+  color: var(--paper-on-dark);
+  background:
+    repeating-linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.07) 0, rgba(255, 255, 255, 0) 12%,
+      rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.32) 100%) 0 0 / 100% calc(100% / 12),
+    var(--maroon);
+}
+.no-js .hero .shutter, .reduce-motion .hero .shutter { display: none; }
+.shutter.is-built { background: none; }
+.shutter__paint {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+  text-align: center; padding: var(--gutter);
+}
+.shutter__name {
+  font-family: var(--f-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.6rem, 8.5vw, 9rem); letter-spacing: 0.06em; line-height: 1;
+  color: #EAD9B0; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+.shutter__trade { font-family: var(--f-mono); font-size: clamp(0.65rem, 1vw, 0.85rem); letter-spacing: 0.3em; text-transform: uppercase; color: var(--brass); }
+.shutter__board { margin-top: 10px; }
+.shutter.is-built > .shutter__paint { display: none; }
+
+.shutter__curtain { position: absolute; inset: 0; perspective: 1400px; }
+.shutter__slat {
+  position: absolute; left: 0; right: 0; overflow: hidden;
+  top: calc(var(--i) * 100% / var(--n)); height: calc(100% / var(--n) + 1px);
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 14%, rgba(0, 0, 0, 0) 68%, rgba(0, 0, 0, 0.34)),
+    var(--maroon);
+  transform-origin: 50% 50%; backface-visibility: hidden;
+}
+.shutter__slat .shutter__paint { display: flex; top: calc(var(--i) * -100%); height: calc(var(--n) * 100%); bottom: auto; }
+.shutter__rail {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 10px;
+  background: linear-gradient(#C4A06A, var(--brass) 40%, #6E5530);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* ═══════════ Loupe ═══════════ */
+.loupe {
+  position: absolute; z-index: 5; width: 170px; height: 170px; border-radius: 50%;
+  overflow: hidden; pointer-events: none; opacity: 0; transform: scale(0.85);
+  border: 2px solid var(--brass); background: var(--ledger);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.5), inset 0 0 0 4px rgba(255, 255, 255, 0.25);
+  transition: opacity 0.25s, transform 0.25s var(--ease-out);
+}
+.loupe.is-on { opacity: 1; transform: none; }
+.loupe__inner { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+.loupe-overlay {
+  position: fixed; inset: 0; z-index: 70; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+  padding: var(--gutter); background: rgba(26, 23, 20, 0.94); color: var(--paper-on-dark); overflow: auto;
+}
+.loupe-overlay .doc { width: min(92vw, 560px); cursor: default; }
+
+/* ═══════════ Journey Ticket ═══════════ */
+.ticket {
+  position: fixed; right: clamp(12px, 2vw, 28px); bottom: clamp(12px, 2vw, 28px); z-index: 40;
+  width: var(--ticket-w);
+  opacity: 0; transform: translateY(24px); pointer-events: none;
+  transition: opacity 0.5s, transform 0.6s var(--ease-out);
+}
+.no-js .ticket { display: none; }
+.ticket.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.ticket__card {
+  display: block; width: 100%; aspect-ratio: 57 / 30; position: relative;
+  transform-style: preserve-3d; transition: transform 0.9s var(--ease-out);
+  text-align: left;
+}
+.ticket.is-complete .ticket__card { transform: rotateY(180deg); }
+.ticket__face {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between;
+  padding: 9px 12px; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  background: color-mix(in srgb, var(--board) 72%, var(--paper));
+  color: var(--ink); font-family: var(--f-mono); border-radius: 3px;
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(26, 23, 20, 0.25);
+}
+.ticket__face--back { transform: rotateY(180deg); justify-content: center; gap: 8px; }
+.ticket__row { display: flex; justify-content: space-between; font-size: 0.5625rem; letter-spacing: 0.1em; }
+.ticket__route { font-family: var(--f-board); font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.08em; }
+.ticket__now { font-size: 0.625rem; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ticket__now-label { opacity: 0.6; }
+.ticket__thanks { font-family: var(--f-display); font-weight: 600; font-size: 1.05rem; line-height: 1.15; }
+.ticket__punches { display: flex; gap: 5px; }
+.ticket__punch {
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1px solid rgba(26, 23, 20, 0.45); transition: background 0.2s, transform 0.3s var(--ease-out);
+}
+.ticket__punch.is-punched { background: var(--ink); border-color: var(--ink); box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.25); transform: scale(1.1); }
+
+/* Small screens: a slim stub showing only the route and the punches */
+@media (max-width: 599px) {
+  .ticket { --ticket-w: 152px; }
+  .ticket__card { aspect-ratio: auto; height: 54px; }
+  .ticket__face { padding: 8px 10px; gap: 6px; justify-content: center; }
+  .ticket__row, .ticket__now { display: none; }
+  .ticket__route { font-size: 0.75rem; white-space: nowrap; }
+  .ticket__punches { gap: 3px; }
+  .ticket__punch { width: 7px; height: 7px; }
+  .ticket__thanks { font-size: 0.8125rem; }
+}
+
+.ticket__menu {
+  position: absolute; right: 0; bottom: calc(100% + 10px); width: 240px;
+  padding: 10px; background: var(--ink); color: var(--paper-on-dark);
+  border: 1px solid rgba(168, 131, 74, 0.4); border-radius: 4px;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
+}
+.ticket__menu[hidden] { display: none; }
+.ticket__menu a {
+  display: flex; gap: 12px; padding: 8px 10px; border-radius: 3px;
+  font-family: var(--f-ui); font-size: 0.875rem; text-decoration: none;
+}
+.ticket__menu a:hover, .ticket__menu a:focus-visible { background: rgba(239, 230, 210, 0.08); }
+.ticket__menu a span { font-family: var(--f-mono); color: var(--brass); font-size: 0.75rem; padding-top: 2px; }
+.ticket__menu a[aria-current="true"] { color: var(--board); }

@@ -1,0 +1,46 @@
+/* Chapter 0 · The Shutter */
+.hero { padding: 0; position: relative; }
+.hero__stage { position: relative; height: 100vh; height: 100svh; overflow: hidden; background: var(--ink); }
+
+.hero__scene {
+  position: absolute; inset: 0; display: flex; align-items: flex-end; overflow: hidden;
+  background: var(--ink); will-change: transform;
+  box-shadow: 0 0 0 1px rgba(168, 131, 74, 0.35);
+}
+/* Dawn light falling on the platform, art-directed with gradients until HERO-01 exists */
+.hero__light {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(60% 55% at 72% 28%, rgba(227, 178, 60, 0.22), transparent 70%),
+    radial-gradient(40% 40% at 20% 10%, rgba(168, 131, 74, 0.12), transparent 70%),
+    linear-gradient(90deg, rgba(26, 23, 20, 0.78) 0%, rgba(26, 23, 20, 0.35) 45%, rgba(26, 23, 20, 0) 70%),
+    linear-gradient(to top, rgba(26, 23, 20, 0.95) 0%, rgba(26, 23, 20, 0.2) 55%, rgba(26, 23, 20, 0.5) 100%);
+}
+.hero__ph { position: absolute; inset: 0; }
+.hero__ph img { object-position: center 55%; filter: sepia(0.3) contrast(1.05); }
+/* While it is still a placeholder, keep its label above the light; a real image stays beneath it */
+.hero__ph:not(:has(img)) { z-index: 2; pointer-events: none; }
+.hero__ph .ph-box__id { top: auto; bottom: 40px; left: auto; right: var(--gutter); }
+.hero__ph .ph-box__meta { left: var(--gutter); right: var(--gutter); bottom: 20px; text-align: right; }
+
+.hero__copy {
+  position: relative; z-index: 2; width: 100%; max-width: 1440px;
+  padding: 0 var(--gutter) clamp(72px, 13vh, 150px);
+}
+.hero__copy .eyebrow { color: var(--brass); margin-bottom: 22px; }
+.hero__title {
+  font-family: var(--f-display); font-weight: 500; font-size: var(--t-hero);
+  line-height: 0.94; letter-spacing: -0.02em; max-width: 10ch;
+}
+.hero__sub { margin-top: 26px; font-style: italic; font-size: var(--t-lede); color: var(--muted-on-dark); }
+
+.hero__cue {
+  position: absolute; z-index: 3; left: 50%; bottom: 26px; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  font-family: var(--f-mono); font-size: 0.6875rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--paper-on-dark);
+}
+.hero__cue-line { width: 1px; height: 46px; background: var(--brass); transform-origin: top; animation: cue 2.4s var(--ease-out) infinite; }
+@keyframes cue { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1); opacity: 0; } }
+.no-js .hero__cue, .reduce-motion .hero__cue { display: none; }
+@media (prefers-reduced-motion: reduce) { .hero__cue-line { animation: none; } }

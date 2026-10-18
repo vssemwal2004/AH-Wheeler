@@ -1,0 +1,243 @@
+{
+  "HERO-01": {
+    "src": "/images/hero-01.jpg",
+    "caption": "Town Hall and Victoria Terminus, Bombay, 1903",
+    "credit": "Kurt Boeck · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Kurt_boeck_indien_nepal_116.jpg",
+    "licenceUrl": ""
+  },
+  "ORIGIN-01": {
+    "src": "/images/origin-01.jpg",
+    "caption": "“An Indian Railway Station”, Byculla, Great Indian Peninsula Railway, Illustrated London News, 1854",
+    "credit": "The ILLUSTRATED LONDON NEWS · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:An_Indian_Railway_Station_-_ILN_1854.jpg",
+    "licenceUrl": ""
+  },
+  "DOC-01": {
+    "src": "/images/doc-01.jpg",
+    "caption": "Wee Willie Winkie, A.H. Wheeler & Co.’s Indian Railway Library No. 6, One Rupee",
+    "credit": "The British Library · No restrictions · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Image_taken_from_page_7_of_%27(Wee_Willie_Winkie_and_other_child_stories._(Reprinted_in_chief_from_the_%E2%80%9CWeek%27s_News.%E2%80%9D))%27_(11202422175).jpg",
+    "licenceUrl": "https://www.flickr.com/commons/usage/"
+  },
+  "TL-01": {
+    "src": "/images/tl-01.jpg",
+    "caption": "The railway bridge at Allahabad, c. 1870",
+    "credit": "Unknown · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Allahabad_railwaybridge1870.jpg",
+    "licenceUrl": ""
+  },
+  "TL-02": {
+    "src": "/images/tl-02.jpg",
+    "caption": "Soldiers Three, Indian Railway Library, first-state cover, 1888",
+    "credit": "JLROSENB · CC BY-SA 3.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Kipling,_Soldiers_Three,_Cover.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "TL-03": {
+    "src": "/images/tl-03.jpg",
+    "caption": "The Indian railway network in 1893, Constable’s Hand Atlas of India",
+    "credit": "John George Bartholomew · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Indian_Railway_network_1893.jpg",
+    "licenceUrl": ""
+  },
+  "TL-04": {
+    "src": "/images/tl-04.jpg",
+    "caption": "Lithograph postcard, Chitra Shala Press, Pune, c. 1910",
+    "credit": "Paper Jewels · CC BY 4.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Fruit-seller_0.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "TL-05": {
+    "src": "/images/tl-05.jpg",
+    "caption": "Chord Line engine No. 220, East Indian Railway, 1870",
+    "credit": "Unknown author · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Chord_Line_Engine_220,_East_India_Railway_,_1870.jpg",
+    "licenceUrl": ""
+  },
+  "TL-06": {
+    "src": "/images/tl-06.jpg",
+    "caption": "Ambala railway station, 1945",
+    "credit": "Unknown author · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Ambala_railway_station_in_1945.JPG",
+    "licenceUrl": ""
+  },
+  "TL-07": {
+    "src": "/images/tl-07.jpg",
+    "caption": "An A.H. Wheeler stall at Prayag Junction, Allahabad, 2023",
+    "credit": "SM7 · CC BY-SA 4.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Book_stall_at_Prayag_Junction_Railway_Station,_Allahabad.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "LEGACY-01": {
+    "src": "/images/legacy-01.jpg",
+    "caption": "Crowds at Lahore railway station, Illustrated London News, 1864",
+    "position": "38% 50%",
+    "credit": "The Illustrated London News · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Arrival_of_the_Governor-General_of_India_at_the_Lahore_Railway_Station_-_ILN_1864.jpg",
+    "licenceUrl": ""
+  },
+  "TKB-01": {
+    "src": "/images/tkb-01.jpg",
+    "caption": "Portrait awaited from the family archive. Shown: The Phantom 'Rickshaw, A.H. Wheeler & Co., 1890",
+    "credit": "A.H. Wheeler & Co., Allahabad (publisher) · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Phantom_%27Rickshaw_-_Kipling_(1890)_-_original_cover_01.jpg",
+    "licenceUrl": ""
+  },
+  "BOOK-01": {
+    "src": "/images/book-01.jpg",
+    "caption": "Soldiers Three, 1888",
+    "credit": "JLROSENB · CC BY-SA 3.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Kipling,_Soldiers_Three,_Cover.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "BOOK-05": {
+    "src": "/images/book-05.jpg",
+    "caption": "The Phantom 'Rickshaw, A.H. Wheeler & Co., 1890 edition",
+    "credit": "A.H. Wheeler & Co., Allahabad (publisher) · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Phantom_%27Rickshaw_-_Kipling_(1890)_-_original_cover_01.jpg",
+    "licenceUrl": ""
+  },
+  "BOOK-06": {
+    "src": "/images/book-06.png",
+    "caption": "Wee Willie Winkie, cover",
+    "credit": "Rudyard Kipling · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cover_to_Wee_Willie_Winkie_and_other_stories.png",
+    "licenceUrl": ""
+  },
+  "MAP-01": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.433,
+      0.25
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Delhi on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MAP-02": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.54,
+      0.32
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Cawnpore (Kanpur) on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MAP-03": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.555,
+      0.312
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Lucknow on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MAP-04": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.575,
+      0.352
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Allahabad on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MAP-05": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.74,
+      0.334
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Patna on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MAP-06": {
+    "src": "/images/map-1893.jpg",
+    "focus": [
+      0.82,
+      0.416
+    ],
+    "zoom": 4,
+    "aspect": 1.321,
+    "caption": "Howrah and Calcutta on the general railway map of India, 1893",
+    "credit": "John Bartholomew & Co., Constable’s Hand Atlas of India · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:General_railway_map_of_the_British_Indian_Empire,_from_the_Constable%27s_Hand_Atlas_of_India_(1893).jpg",
+    "licenceUrl": ""
+  },
+  "MEM-01": {
+    "src": "/images/mem-01.jpg",
+    "caption": "“Railway Porter”, Dhurandhar card with the A.H.W. stamp, 1903",
+    "credit": "Paper Jewels · CC BY-SA 4.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Railway_Porter.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "MEM-02": {
+    "src": "/images/mem-02.jpg",
+    "caption": "Bori Bunder, Bombay, Ravi Varma Press lithograph, 1899",
+    "credit": "Paper Jewels · CC BY 4.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Bori-bunder.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "MEM-03": {
+    "src": "/images/mem-03.jpg",
+    "caption": "Water-lift, postcard by M.V. Dhurandhar, c. 1904",
+    "credit": "Paper Jewels · CC BY 4.0 · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Water-lift_0.jpg",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "MEM-04": {
+    "src": "/images/mem-04.jpg",
+    "caption": "Khusru Bagh, Allahabad, 1870s",
+    "credit": "Bourne and Shepherd · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Khusru_Bagh,_Allahabad,_1870s.jpg",
+    "licenceUrl": ""
+  },
+  "PORTAL-01": {
+    "src": "/images/portal-01.jpg",
+    "position": "50% 14%",
+    "caption": "Kipling as “Soldiers Three”, Vanity Fair, 1894",
+    "credit": "Leslie Ward · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Joseph_Rudyard_Kipling,_Vanity_Fair,_1894-06-07_(Yale).jpg",
+    "licenceUrl": ""
+  },
+  "PORTAL-02": {
+    "src": "/images/portal-02.jpg",
+    "caption": "“A Railway Train”, lithograph by Hurnam Singh, 19th century",
+    "credit": "Hurnam Singh · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:%27A_Railway_Train%27,_lithographed_sketch_by_Hurnam_Singh,_circa_mid-19th_century.jpg",
+    "licenceUrl": ""
+  },
+  "PORTAL-03": {
+    "src": "/images/portal-03.jpg",
+    "caption": "Locomotive No. 20, East Coast Railway, 1900",
+    "credit": "Unknown author · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:ECR_Lokomotive_No.20_1900.jpg",
+    "licenceUrl": ""
+  },
+  "CLOSE-01": {
+    "src": "/images/close-01.jpg",
+    "caption": "The Calcutta Railway embankment behind Serampore, Illustrated London News, 1853",
+    "credit": "The Illustrated London News from a sketch by G.K. Ingelow, Esq. · Public domain · Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Embankment_for_the_Calcutta_Railway,_Behind_the_Town_of_Serampore.jpg",
+    "licenceUrl": ""
+  }
+}

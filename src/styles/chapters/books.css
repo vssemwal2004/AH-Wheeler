@@ -1,0 +1,78 @@
+/* Chapter 4 · Browse the Stall */
+.books__head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 64px; align-items: end; }
+.books__head .lede { color: var(--fg-soft); max-width: 30em; }
+@media (max-width: 899px) { .books__head { grid-template-columns: 1fr; } }
+
+.books__filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+.filter {
+  position: relative; min-height: 40px; padding: 0 18px 0 26px;
+  font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid var(--rule); border-radius: 2px; transition: background 0.3s, color 0.3s;
+}
+.filter::before { content: ''; position: absolute; left: 10px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; border: 1px solid currentColor; }
+.filter[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.filter[aria-pressed="true"]::before { background: var(--board); border-color: var(--board); }
+
+.shelf {
+  margin-top: 48px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; scrollbar-width: none;
+}
+.shelf::-webkit-scrollbar { display: none; }
+.shelf__row {
+  display: flex; align-items: flex-end; gap: 6px;
+  width: max-content; min-width: 100%; height: 420px;
+  padding: 0 var(--gutter) 18px;
+  /* the plank */
+  background: linear-gradient(to top, #3E2A18 0 4px, #6B4A2D 4px 16px, #8A6340 16px 18px, transparent 18px);
+}
+.shelf__item { scroll-snap-align: start; }
+.shelf__item[hidden] { display: none; }
+
+.book {
+  position: relative; display: flex; height: var(--h, 320px); width: 52px; overflow: hidden;
+  transition: width 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  text-align: left;
+}
+.book__spine {
+  flex: 0 0 52px; height: 100%; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.08) 30%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.3)),
+    var(--c);
+  color: var(--paper-on-dark);
+}
+.book__spine::before, .book__spine::after { content: ''; position: absolute; left: 8px; right: 8px; height: 2px; background: var(--brass); opacity: 0.7; }
+.book__spine::before { top: 22px; }
+.book__spine::after { bottom: 22px; }
+.book__spine-title {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: var(--f-board); font-weight: 500; font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase;
+  max-height: 78%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+.book__cover {
+  flex: 0 0 auto; height: 100%; aspect-ratio: 2 / 3; position: relative;
+  display: flex; flex-direction: column; justify-content: space-between; padding: 18px 16px;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 10px),
+    color-mix(in srgb, var(--c) 82%, var(--paper));
+  color: var(--paper-on-dark);
+  box-shadow: inset 6px 0 10px -6px rgba(0, 0, 0, 0.5);
+}
+.book__cover.has-img { padding: 0; background: var(--c); }
+.book__cover.has-img > span { display: none; }
+.book__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.book__series { font-family: var(--f-mono); font-size: 0.625rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
+.book__title { font-family: var(--f-display); font-weight: 600; font-size: 1.5rem; line-height: 1.05; }
+.book__meta { font-family: var(--f-mono); font-size: 0.625rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+
+.book:hover, .book:focus-visible, .book.is-open { width: calc(52px + var(--h, 320px) * 2 / 3); transform: translateY(-8px); }
+
+.shelf__controls { display: flex; gap: 10px; margin-top: 24px; }
+
+/* Mobile: covers face-out */
+@media (max-width: 699px) {
+  .shelf__row { height: 360px; gap: 14px; }
+  .book { width: calc(52px + var(--h, 320px) * 2 / 3); }
+  .book:hover, .book:focus-visible { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .book { transition: none; } }

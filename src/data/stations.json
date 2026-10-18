@@ -1,0 +1,15 @@
+{
+  "_note": "Schematic only, not geographic. Stations are placeholders until the stall network is confirmed from company records.",
+  "lines": [
+    { "kind": "main", "d": "M 120 150 H 280 L 400 270 H 470 L 560 360 H 760 L 840 440 H 920" },
+    { "kind": "branch", "d": "M 400 270 L 500 170 H 600" }
+  ],
+  "stations": [
+    { "slot": "MAP-01", "id": "delhi", "en": "DELHI", "hi": "दिल्ली", "x": 120, "y": 150, "labelDy": -38, "text": "Stall memory placeholder: add a one-line story from this station." },
+    { "slot": "MAP-02", "id": "kanpur", "en": "KANPUR", "hi": "कानपुर", "x": 400, "y": 270, "labelDy": 40, "text": "Stall memory placeholder: add a one-line story from this station." },
+    { "slot": "MAP-03", "id": "lucknow", "en": "LUCKNOW", "hi": "लखनऊ", "x": 600, "y": 170, "labelDy": -38, "text": "Stall memory placeholder: add a one-line story from this station." },
+    { "slot": "MAP-04", "id": "allahabad", "en": "ALLAHABAD", "hi": "इलाहाबाद", "x": 560, "y": 360, "labelDy": 40, "text": "Where the first stall opened in 1877 (to be verified). The station is now Prayagraj Junction." },
+    { "slot": "MAP-05", "id": "patna", "en": "PATNA", "hi": "पटना", "x": 760, "y": 360, "labelDy": -38, "text": "Stall memory placeholder: add a one-line story from this station." },
+    { "slot": "MAP-06", "id": "howrah", "en": "HOWRAH", "hi": "हावड़ा", "x": 920, "y": 440, "labelDy": -38, "text": "Stall memory placeholder: the Howrah kiosk is reported to be recognised as a heritage structure (verify)." }
+  ]
+}

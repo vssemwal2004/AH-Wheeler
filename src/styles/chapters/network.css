@@ -1,0 +1,39 @@
+/* Chapter 7 · Across India (schematic) */
+.network__head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 64px; align-items: end; }
+.network__head .lede { color: var(--fg-soft); max-width: 30em; }
+.network__grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: clamp(24px, 4vw, 64px); align-items: center; margin-top: 56px; }
+
+.network__map svg { width: 100%; height: auto; overflow: visible; }
+.rmap__line { fill: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.rmap__line--main { stroke: var(--blue); }
+.rmap__line--branch { stroke: color-mix(in srgb, var(--blue) 55%, var(--paper)); }
+.rmap__node { cursor: pointer; outline: none; }
+.rmap__node circle { fill: var(--paper); stroke: var(--ink); stroke-width: 3; transition: r 0.3s; }
+.rmap__node rect { fill: var(--board); stroke: var(--ink); stroke-width: 1.5; }
+.rmap__node text { font-family: var(--f-board); font-weight: 600; font-size: 19px; letter-spacing: 0.08em; fill: var(--ink); text-anchor: middle; dominant-baseline: central; }
+.rmap__node:hover circle, .rmap__node:focus-visible circle, .rmap__node.is-active circle { r: 13; fill: var(--board); }
+.rmap__node:focus-visible rect { stroke: var(--maroon); stroke-width: 3; }
+
+.network__panel {
+  padding: 18px; background: var(--ledger); border: 1px solid var(--rule);
+  box-shadow: 0 24px 50px -32px rgba(26, 23, 20, 0.5);
+}
+.station__name { margin-top: 16px; font-family: var(--f-board); font-weight: 600; font-size: 1.4rem; letter-spacing: 0.06em; }
+.station__hi { font-family: var(--f-deva); font-weight: 600; color: var(--muted); }
+.station__text { margin-top: 8px; font-size: 1rem; }
+.station__close { display: none; }
+
+@media (max-width: 899px) {
+  .network__head, .network__grid { grid-template-columns: 1fr; }
+  /* keep station labels readable: the diagram scrolls sideways instead of shrinking */
+  .network__map { overflow-x: auto; margin-inline: calc(-1 * var(--gutter)); padding: 0 var(--gutter) 8px; scrollbar-width: thin; }
+  .network__map svg { min-width: 760px; }
+  .network__panel {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; max-height: 80svh; overflow: auto;
+    border-radius: 14px 14px 0 0; padding: 20px var(--gutter) 28px;
+    transform: translateY(105%); transition: transform 0.5s var(--ease-out);
+  }
+  .network__panel.is-open { transform: none; }
+  .network__panel .ph-box { max-width: 280px; }
+  .station__close { display: inline-flex; margin-top: 16px; }
+}

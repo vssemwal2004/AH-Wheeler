@@ -1,0 +1,12 @@
+/* Chapter 1 · Opening statement */
+.opening__statement {
+  max-width: 21em;
+  font-family: var(--f-read); font-weight: 400;
+  font-size: clamp(1.6rem, 3.3vw, 2.9rem); line-height: 1.3; letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.opening__tickets {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px);
+  margin-top: clamp(64px, 10vh, 120px); max-width: 1040px;
+}
+@media (max-width: 760px) { .opening__tickets { grid-template-columns: 1fr; } }

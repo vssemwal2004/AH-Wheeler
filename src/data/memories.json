@@ -1,0 +1,30 @@
+[
+  {
+    "slot": "MEM-01",
+    "quote": "Sample: I bought my first detective novel at the Wheeler stall before a night train, and finished it before dawn.",
+    "who": "Name · Reader",
+    "where": "Station · Year",
+    "sample": true
+  },
+  {
+    "slot": "MEM-02",
+    "quote": "Sample: My father managed a stall for thirty years. He knew which passengers wanted which newspaper before they asked.",
+    "who": "Name · Bookseller’s family",
+    "where": "Station · Year",
+    "sample": true
+  },
+  {
+    "slot": "MEM-03",
+    "quote": "Sample: Every summer holiday began with one comic from the platform stall. Choosing it took longer than the journey.",
+    "who": "Name · Reader",
+    "where": "Station · Year",
+    "sample": true
+  },
+  {
+    "slot": "MEM-04",
+    "quote": "Sample: As a young author, seeing my book on a railway stall felt like it had finally reached the whole country.",
+    "who": "Name · Author",
+    "where": "Station · Year",
+    "sample": true
+  }
+]

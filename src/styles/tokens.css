@@ -1,0 +1,52 @@
+/* ─── "Platform & Press" design tokens ─── */
+:root {
+  /* Colour */
+  --ink: #1A1714;        /* press ink — night/dawn, body text */
+  --paper: #F2EADB;      /* station paper — main reading bg */
+  --ledger: #E6DAC3;     /* ledger paper — alternate paper, cards */
+  --maroon: #5E1A1D;     /* railway oxblood — signature */
+  --green: #1F3A2E;      /* bottle green — carriage interior */
+  --brass: #A8834A;      /* hairlines, years on dark */
+  --board: #E3B23C;      /* station-board yellow — boards + ticket ONLY. Sample from real boards before launch */
+  --blue: #3E5C76;       /* map routes only */
+  --muted: #6B6258;      /* captions on paper */
+
+  --paper-on-dark: #EFE6D2;
+  --muted-on-dark: #B5AA98;
+
+  /* Type */
+  --f-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --f-read: 'Source Serif 4', Georgia, serif;
+  --f-ui: 'Inter', system-ui, sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --f-board: 'Oswald', 'Arial Narrow', sans-serif;
+  --f-deva: 'Noto Sans Devanagari', sans-serif;
+  --f-hand: 'Caveat', cursive;
+
+  --t-hero: clamp(3rem, 8vw, 8rem);
+  --t-h2: clamp(2.25rem, 5vw, 4.5rem);
+  --t-h3: clamp(1.5rem, 2.6vw, 2.25rem);
+  --t-lede: clamp(1.2rem, 1.6vw, 1.45rem);
+  --t-body: clamp(1.05rem, 1.2vw, 1.25rem);
+  --t-small: 0.875rem;
+  --t-label: 0.75rem;
+
+  /* Space */
+  --gutter: clamp(16px, 4vw, 56px);
+  --section-y: clamp(96px, 14vh, 180px);
+  --max: 1280px;
+  --radius: 4px;
+  --ticket-w: clamp(170px, 14vw, 212px);
+  --ticket-clear: calc(var(--ticket-w) + 40px); /* keep fixed-ticket zone free near the bottom edge */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* ≈ expo.out */
+  --dur: 0.9s;
+}
+
+/* Theme scopes: each chapter declares what sits on it */
+.theme-paper  { --bg: var(--paper);  --fg: var(--ink);          --fg-soft: var(--muted);        --accent: var(--maroon); --rule: rgba(26, 23, 20, 0.14); }
+.theme-ledger { --bg: var(--ledger); --fg: var(--ink);          --fg-soft: var(--muted);        --accent: var(--maroon); --rule: rgba(26, 23, 20, 0.16); }
+.theme-dark   { --bg: var(--ink);    --fg: var(--paper-on-dark); --fg-soft: var(--muted-on-dark); --accent: var(--brass);  --rule: rgba(239, 230, 210, 0.16); }
+.theme-green  { --bg: var(--green);  --fg: var(--paper-on-dark); --fg-soft: var(--muted-on-dark); --accent: var(--brass);  --rule: rgba(239, 230, 210, 0.16); }
+.theme-maroon { --bg: var(--maroon); --fg: var(--paper-on-dark); --fg-soft: #D2B9A8;             --accent: var(--brass);  --rule: rgba(239, 230, 210, 0.2); }

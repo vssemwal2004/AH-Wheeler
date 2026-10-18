@@ -1,0 +1,5 @@
+[
+  { "slot": "PORTAL-01", "dest": "ARCHIVES", "platform": "PF 1", "status": "ON TIME", "desc": "Publications, documents and photographs", "href": "#departures", "accent": "#A8834A" },
+  { "slot": "PORTAL-02", "dest": "STORIES", "platform": "PF 2", "status": "ON TIME", "desc": "Memories, interviews and testimonials", "href": "#memories", "accent": "#B4474C" },
+  { "slot": "PORTAL-03", "dest": "FILMS", "platform": "PF 3", "status": "ON TIME", "desc": "Documentaries and oral histories on YouTube", "href": "#departures", "accent": "#5E8C74" }
+]
